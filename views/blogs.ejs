@@ -1,0 +1,30 @@
+<%-include("./partials/header")-%>
+
+<div class="container-fluid">
+    <h1 class="font-weight-bold">Blogs</h1>
+</div><br><br>
+
+<% for(let i=0; i<posts.length;i++){%>
+    <div class="container-fluid mb-5">
+        <%let link="/single-post/"+posts[i].link%>
+        <h1><a style="text-decoration: inherit; color: inherit;" href=<%=link%>><%=posts[i].head%></a></h1>
+        <p><%=posts[i].content.slice(0,100)%>...</p>
+    </div>
+    <%}%>
+
+<hr>
+
+<div class="container">
+    <form class="form-group" method="post" action="/add-post">
+        <label class="text-left"><h4 class="font-weight-bold">Heading</h4>
+            <input class="form-control heading-input" size="100%"  name="head" type="text" placeholder="Heading of Blog">
+        </label><br>
+        <label class="text-left mt-2"><h4 class="font-weight-bold">Content</h4>
+        <textarea class="d-inline form-control" name="content" rows="15" cols="90" style="resize: none; font-weight: bold;"></textarea>
+        <button type="submit" class="btn btn-outline-dark font-weight-bold">Publish</button>
+        </label>
+    </form>
+</div>
+<hr>
+
+<%-include("./partials/footer")-%>

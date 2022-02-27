@@ -1,0 +1,59 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+h1{
+    font-weight: bolder;
+    font-style: normal;
+}
+
+body{
+    text-align: center;
+}
+
+.nav-link{
+    color: #57DFE5;
+    transition: all 1s ease;
+}
+
+.nav-link:hover{
+    color: #151D3B;
+}
+
+.container-fluid{
+    text-align: left;
+    width: 75vw;
+}
+
+.heading-input::placeholder{
+    font-weight: bold;
+}
+
+.heading-input{
+    font-weight: bold;
+}
+
+.navbar-brand{
+    letter-spacing: 5px;
+    padding-left: 50px;
+    margin-right: 200px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width:500px){
+    .navbar-brand{
+        letter-spacing: 5px;
+        padding-left: 0px;
+        margin-right: 0px;
+        text-transform: uppercase;
+    }
+
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;    
+    width: 100%;
+}
