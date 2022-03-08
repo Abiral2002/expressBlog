@@ -17,6 +17,7 @@ app.set("view engine","ejs")
 
 //route middleware
 app.use("/single-post",require("./routes/post"))
+app.use("/post/api",require("./routes/api/api"))
 
 //Render Controls
 app.get("/",(req,res)=>{
